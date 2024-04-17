@@ -30,13 +30,6 @@ $logout = function(Logout $logout) {
                     </svg>
                 </a>
             </h1>
-            <div>
-                <ul class="flex gap-10">
-                    <li>Home</li>
-                    <li>Why Us</li>
-                    <li>Sewa Mobil</li>
-                </ul>
-            </div>
             @if (auth()->user())
                 <div class="navbar-nav flex-row order-md-last">
                     <div class="nav-item dropdown">
@@ -50,7 +43,6 @@ $logout = function(Logout $logout) {
                         <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
                             <a href="#" class="dropdown-item">Status</a>
                             <a href="./profile.html" class="dropdown-item">Profile</a>
-                            <a href="#" class="dropdown-item">Feedback</a>
                             <div class="dropdown-divider"></div>
                             <a href="#" class="dropdown-item">Settings</a>
                             <button type="button" wire:click="logout" class="dropdown-item">Logout</button>
@@ -58,6 +50,13 @@ $logout = function(Logout $logout) {
                     </div>
                 </div>
             @else
+                <div>
+                    <ul class="flex gap-10">
+                        <li>Home</li>
+                        <li>Why Us</li>
+                        <li>Sewa Mobil</li>
+                    </ul>
+                </div>
                 <div class="flex gap-3">
                     <a href="{{ route('login') }}">
                         <button class="text-[#013330] px-3 bg-white py-1 rounded-lg">Login</button>
